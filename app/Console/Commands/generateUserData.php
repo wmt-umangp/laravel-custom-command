@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Models\User;
-
+use Illuminate\Facades\Logs;
 class generateUserData extends Command
 {
     /**
@@ -42,33 +42,6 @@ class generateUserData extends Command
         for($i=0;$i<$userData;$i++){
             User::factory()->create();
         }
+        // Log::info("hello");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
